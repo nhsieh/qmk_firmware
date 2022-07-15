@@ -26,8 +26,7 @@ enum preonic_layers {
 
 enum preonic_keycodes {
   QWERTY = SAFE_RANGE,
-  VIM_MACRO,
-  VIM_MACRO_REPLAY
+  WINDOWS_UNLOCK
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -92,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_DEL, _______, _______, _______, _______, _______, _______, KC_P7, KC_P8, KC_P9, KC_PMNS, KC_BSPC,  \
   _______, _______, _______, _______, _______, _______, _______, KC_P4, KC_P5, KC_P6, KC_PPLS, KC_DEL,  \
   _______, _______, _______, _______, _______, _______, _______, KC_P1, KC_P2, KC_P3, KC_PEQL, _______,  \
-  KC_LOCK, VIM_MACRO, VIM_MACRO_REPLAY, _______, _______, _______, _______, _______, KC_P0, KC_PDOT, KC_PENT, _______ \
+  KC_LOCK, WINDOWS_UNLOCK, _______, _______, _______, _______, _______, _______, KC_P0, KC_PDOT, KC_PENT, _______ \
 ),
 
 /* Adjust
@@ -127,14 +126,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           }
           return false;
           break;
-        case VIM_MACRO:
+        case WINDOWS_UNLOCK:
           if (record->event.pressed) {
-            SEND_STRING(SS_TAP(X_Q)SS_TAP(X_Q));
-          }
-          break;
-        case VIM_MACRO_REPLAY:
-          if (record->event.pressed) {
-            SEND_STRING(SS_LSFT("2")SS_TAP(X_Q));
+            SEND_STRING(SS_LCTRL(SS_LALT(SS_TAP(X_DELETE))));
           }
           break;
       }
