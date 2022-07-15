@@ -24,7 +24,7 @@ http://www.keyboard-layout-editor.com/
 ["Del","","","","","","",{a:5},"7\nHome","8\n↑",{a:4},"9\nPgUp",{a:7},"-","Back Space"],
 ["","","","","","","",{a:5},"4\n←","5","6\n→",{a:7},"+","Del"],
 ["","","","","","","",{a:5},"1\nEnd","2\n↓","3\nPgDn",{a:7},"=",""],
-["Key Lock","VIM Macro","VIM Macro Replay","","",{w:2},"","",{a:5},"0\nIns",".\nDel",{a:7},"Enter",""]
+["Key Lock","Win Unlock","","","",{w:2},"","",{a:5},"0\nIns",".\nDel",{a:7},"Enter",""]
 ```
 
 ##Adjust
