@@ -13,8 +13,17 @@
 ![Adjust Layout](layout/adjust.png?raw=true "Adjust")
 
 # Instructions to Flash 
+1. git clone and use correct branch
+```
+   git clone git@github.com:nhsieh/qmk_firmware.git
+   git switch custom_preonic
+```
 1. Build/compile with `make preonic/rev2:nhsieh` or `make preonic/rev3:nhsieh`
 (If things fail, try `git submodule update --init --recursive` and run again)
+```
+   QMK Firmware 0.6.214
+   Making preonic/rev3 with keymap nhsieh
+```
 2. Open `qmk Toolbox`
 3. With keyboard plugged in, push the reset switch on the back
 4. Choose the applicable hex file and push `Flash`
