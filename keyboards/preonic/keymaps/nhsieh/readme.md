@@ -18,6 +18,7 @@
    git clone git@github.com:nhsieh/qmk_firmware.git
    git switch custom_preonic
 ```
+1. Setup [build environment](https://docs.qmk.fm/#/newbs_getting_started)
 1. Build/compile with `make preonic/rev2:nhsieh` or `make preonic/rev3:nhsieh`
 (If things fail, try `git submodule update --init --recursive` and run again)
 ```
